@@ -84,6 +84,7 @@ seg_models/
 ├── train.py.py
 └── catalogue.py     # Model/backbone listings, metadata, recommended configs
 tests/
+├── __init__.py
 └── test_inference.py
 requirements.txt
 README.md
