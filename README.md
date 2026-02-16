@@ -1,6 +1,7 @@
 # SegModels
 ![Status](https://img.shields.io/badge/status-active_development-orange)
 ![Release](https://img.shields.io/badge/version-0.1.0--alpha-blue)
+
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)
 ![Python Version](https://img.shields.io/badge/python-3.12-blue?logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.9+-ee4c2c?logo=pytorch&logoColor=white)
