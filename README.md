@@ -82,8 +82,11 @@ seg_models/
 └── catalogue.py     # Model/backbone listings, metadata, recommended configs
 tests/
 └── test_inference.py
+dataloader.py
+metrics.py
 requirements.txt
 README.md
+train.py
 ```
 
 ## License
