@@ -1,4 +1,11 @@
 # SegModels
+![Status](https://img.shields.io/badge/status-active_development-orange)
+![Release](https://img.shields.io/badge/version-0.1.0--alpha-blue)
+> [!WARNING]
+> **Work in Progress**: This library is currently in development.
+> The API is subject to breaking changes, and some models may not be fully tested yet. 
+
+
 
 A unified factory for semantic segmentation models — wrapping both
 [segmentation_models_pytorch](https://github.com/qubvel/segmentation_models.pytorch)
