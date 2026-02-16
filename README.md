@@ -79,16 +79,13 @@ seg_models/
 ├── __init__.py      # Public API re-exports
 ├── factory.py       # create_segmentation_model()
 ├── wrappers.py      # PadCropWrapper, HFUpsampleWrapper, Mask2FormerSemanticWrapper
+├── dataloader.py
+├── metrics.py
+├── train.py.py
 └── catalogue.py     # Model/backbone listings, metadata, recommended configs
 tests/
 └── test_inference.py
-dataloader.py
-metrics.py
 requirements.txt
 README.md
-train.py
 ```
 
-## License
-
-MIT
