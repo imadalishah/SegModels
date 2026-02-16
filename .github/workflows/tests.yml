@@ -34,4 +34,4 @@ jobs:
         ls -R
         
     - name: Run inference tests
-      run: python tests/test_inference.py
+      run: python test/test_inference.py
