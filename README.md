@@ -4,7 +4,9 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-orange)
 ![License](https://img.shields.io/github/license/imadalishah/SegModels)
+
 ![Stars](https://img.shields.io/github/stars/imadalishah/SegModels?style=social)
+![Build Status](https://img.shields.io/github/actions/workflow/status/username/SegModels/main.yml)
 
 > [!WARNING]
 > **Work in Progress**: This library is currently in development.
