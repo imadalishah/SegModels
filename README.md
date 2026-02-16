@@ -44,14 +44,14 @@ from seg_models import create_segmentation_model
 model = create_segmentation_model(
     model_name="deeplabv3+",
     backbone_name="resnet101",
-    in_channels=3, # or for HSI-Drive: 25
+    in_channels=3, # or for Hyperspectral City: 128
     out_channels=19,
     pretrained=True,
 )
 
 # Works with any spatial size
 import torch
-x = torch.randn(1, 3, 209, 416)  # or for HSI-Drive: 209x416
+x = torch.randn(1, 25, 209, 416)  # or for HSI-Drive: 209x416x25
 out = model(x)  # (1, 10, 209, 416)
 ```
 
