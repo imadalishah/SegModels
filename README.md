@@ -1,6 +1,11 @@
 # SegModels
 ![Status](https://img.shields.io/badge/status-active_development-orange)
 ![Release](https://img.shields.io/badge/version-0.1.0--alpha-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-orange)
+![License](https://img.shields.io/github/license/imadalishah/SegModels)
+![Stars](https://img.shields.io/github/stars/imadalishah/SegModels?style=social)
+
 > [!WARNING]
 > **Work in Progress**: This library is currently in development.
 > The API is subject to breaking changes, and some models may not be fully tested yet. 
