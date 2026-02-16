@@ -63,7 +63,7 @@ def _output_shape(out) -> str:
     if isinstance(out, dict):
         key = next(iter(out))
         val = out[key]
-        return f"dict[\'{key}\'] → {val.shape}" if hasattr(val, "shape") else str(type(val))
+        return f"dict['{key}'] → {val.shape}" if hasattr(val, "shape") else str(type(val))
     if hasattr(out, "logits"):
         return f"logits → {out.logits.shape}"
     return str(type(out))
@@ -148,15 +148,15 @@ def run_inference_test():
     failed = total - passed
 
     hdr = (
-        f"{\'Model\':<22} {\'Backbone\':<52} {\'C\':>3} {\'HxW\':<10} "
-        f"{\'PT\':>5} {\'Status\':<6} {\'Output\':<30} {\'Time\'}"
+        f"{'Model':<22} {'Backbone':<52} {'C':>3} {'HxW':<10} "
+        f"{'PT':>5} {'Status':<6} {'Output':<30} {'Time'}"
     )
     print(f"\n{hdr}")
     for r in results:
         print(
-            f"{r[\'model\']:<22} {r[\'backbone\']:<52} {r[\'in_channels\']:>3} "
-            f"{r[\'img_size\']:<10} {str(r[\'pretrained\']):>5} {r[\'status\']:<6} "
-            f"{str(r[\'output_shape\']):<30} {r[\'time_s\']}s"
+            f"{r['model']:<22} {r['backbone']:<52} {r['in_channels']:>3} "
+            f"{r['img_size']:<10} {str(r['pretrained']):>5} {r['status']:<6} "
+            f"{str(r['output_shape']):<30} {r['time_s']}s"
         )
 
     print(f"\n✅ Passed: {passed}/{total}  |  ❌ Failed: {failed}/{total}")
