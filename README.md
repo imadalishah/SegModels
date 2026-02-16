@@ -6,7 +6,8 @@
 ![License](https://img.shields.io/github/license/imadalishah/SegModels)
 
 ![Stars](https://img.shields.io/github/stars/imadalishah/SegModels?style=social)
-![Build Status](https://img.shields.io/github/actions/workflow/status/username/SegModels/main.yml)
+[![Model Inference Tests](https://github.com/imadalishah/SegModels/actions/workflows/tests.yml/badge.svg)](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/actions/workflows/tests.yml)
+
 
 > [!WARNING]
 > **Work in Progress**: This library is currently in development.
