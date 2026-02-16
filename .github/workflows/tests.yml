@@ -20,11 +20,12 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
+        cache: 'pip'
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        python -m pip install --upgrade pip -q
+        pip install -r requirements.txt -q
         # Install torch CPU version to keep the CI runner light and fast
         pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 
