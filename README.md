@@ -3,6 +3,7 @@
 ![Release](https://img.shields.io/badge/version-0.1.0--alpha-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-orange)
+[![SMP](https://img.shields.io/badge/Engine-SMP-blue)](https://github.com/qubvel/segmentation_models.pytorch)
 ![License](https://img.shields.io/github/license/imadalishah/SegModels)
 
 ![Stars](https://img.shields.io/github/stars/imadalishah/SegModels?style=social)
