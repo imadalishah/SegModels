@@ -8,7 +8,7 @@
 [![SMP](https://img.shields.io/badge/Library-SMP-blue?logo=pytorch)](https://github.com/qubvel-org/segmentation_models.pytorch)
 
 ![Stars](https://img.shields.io/github/stars/imadalishah/SegModels?style=social)
-[![Model Inference Tests](https://github.com/imadalishah/SegModels/actions/workflows/tests.yml/badge.svg)](https://github.com/imadalishah/SegModels/actions/workflows/tests.yml)
+[![Inference Tests](https://github.com/imadalishah/SegModels/actions/workflows/tests.yml/badge.svg)](https://github.com/imadalishah/SegModels/actions/workflows/tests.yml)
 ![License](https://img.shields.io/github/license/imadalishah/SegModels)
 
 
