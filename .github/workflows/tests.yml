@@ -36,4 +36,4 @@ jobs:
         pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu -q
 
     - name: Run inference tests
-      run: python test/test_inference.py
+      run: python -m tests.test_inference
