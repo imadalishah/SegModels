@@ -4,7 +4,8 @@
 
 ![Python Version](https://img.shields.io/badge/python-3.12-blue?logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.9+-ee4c2c?logo=pytorch&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-orange)
+[![HF Transformers](https://img.shields.io/badge/%F0%9F%A4%97%20Library-HF%20Transformers-yellow)](https://huggingface.co/docs/transformers/index)
+[![SMP](https://img.shields.io/badge/Library-SMP-blue?logo=pytorch)](https://github.com/qubvel-org/segmentation_models.pytorch)
 
 ![Stars](https://img.shields.io/github/stars/imadalishah/SegModels?style=social)
 [![Model Inference Tests](https://github.com/imadalishah/SegModels/actions/workflows/tests.yml/badge.svg)](https://github.com/imadalishah/SegModels/actions/workflows/tests.yml)
