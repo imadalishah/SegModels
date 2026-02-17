@@ -9,7 +9,8 @@
 
 ![Stars](https://img.shields.io/github/stars/imadalishah/SegModels?style=social)
 [![Inference Tests](https://github.com/imadalishah/SegModels/actions/workflows/tests.yml/badge.svg)](https://github.com/imadalishah/SegModels/actions/workflows/tests.yml)
-![License](https://img.shields.io/github/license/imadalishah/SegModels)
+![License](https://img.shields.io/badge/License-MIT-blue?logo=mit)
+
 
 
 > [!WARNING]
