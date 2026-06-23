@@ -33,61 +33,77 @@ behind a single `create_segmentation_model()` call.
 | CNN | UNet, UNet++, FPN, LinkNet, PSPNet, PAN, DeepLabV3, DeepLabV3+, MAnet | SMP |
 | Transformer | SegFormer, Mask2Former, UPerNet-Swin, DPT | HuggingFace |
 
+To inspect supported configurations programmatically:
+
+```python
+from seg_models import list_available_models, list_available_backbones
+
+print(list_available_models())
+print(list_available_backbones())
+
+```
+
 ## Installation
 
 ```bash
+git clone https://github.com/imadalishah/SegModels.git
+cd SegModels
 pip install -r requirements.txt
+pip install -e .
+
 ```
 
 ## Quick start
 
 ```python
+import torch
 from seg_models import create_segmentation_model
 
 model = create_segmentation_model(
     model_name="deeplabv3+",
     backbone_name="resnet101",
-    in_channels=3, # or for Hyperspectral City: 128
+    in_channels=25, # or for Hyperspectral City: 128
     out_channels=19,
     pretrained=True,
 )
 
-# Works with any spatial size
-import torch
-x = torch.randn(1, 25, 209, 416)  # or for HSI-Drive: 209x416x25
-out = model(x)  # (1, 10, 209, 416)
+# Works natively with custom, non-square spatial sizes
+x = torch.randn(1, 25, 209, 416)  # Shape: (B, C, H, W)
+out = model(x)                    # Shape: (1, 19, 209, 416)
+
 ```
 
 ## Advanced Usage
 
 ### Handling Outputs (Tensors vs. Dicts)
-Depending on your downstream training loop, you can request a raw tensor or a Hugging Face-style dictionary output.
+
+Depending on your downstream training loop framework, you can request a raw tensor or a Hugging Face-style dictionary output.
 
 ```python
-# Returns a raw Tensor of shape (B, out_channels, H, W)
+# Default: Returns a raw Tensor of shape (B, out_channels, H, W)
 logits = model(x) 
 
-# Force a dictionary output for Hugging Face compatibility
+# Force a dictionary output for Hugging Face Trainer compatibility
 model = create_segmentation_model(..., return_dict=True)
 outputs = model(x)
 logits = outputs["logits"]
+
 ```
 
-```python
-from seg_models import list_available_models, list_available_backbones
-print(list_available_models())
-print(list_available_backbones())
-```
+---
+
 ## Important Gotchas & Behavior
 
-- **Mask2Former Post-Processing:** Hugging Face's `Mask2Former` natively outputs class and mask queries. `SegModels` automatically wraps this to interpolate and argmax/softmax it into a standard semantic segmentation map, but note that memory consumption may spike for massive target resolutions.
-- **Backbone Availability:** Not all backbones are cross-compatible between CNN and Transformer architectures. Use `list_available_backbones(model_name="...")` to see what fits your chosen architecture.
+* **Mask2Former Post-Processing:** Hugging Face's `Mask2Former` natively outputs class and mask queries rather than a standard pixel map. `SegModels` automatically wraps this architecture to interpolate and map queries into a standard semantic segmentation tensor, but keep in mind that peak memory consumption may spike for exceptionally high target resolutions.
+* **Backbone Availability:** Not all backbones are cross-compatible between CNN (SMP) and Transformer (HF) architectures. Use `list_available_backbones(model_name="...")` to verify valid pairings.
 
+---
 
 ## Running the smoke test
 
 ```bash
 python -m tests.test_inference
+
 ```
 
 ## Project structure
@@ -99,27 +115,25 @@ seg_models/
 ├── wrappers.py      # PadCropWrapper, HFUpsampleWrapper, Mask2FormerSemanticWrapper
 ├── dataloader.py
 ├── metrics.py
-├── train.py.py
+├── train.py
 └── catalogue.py     # Model/backbone listings, metadata, recommended configs
 tests/
 ├── __init__.py
 └── test_inference.py
 requirements.txt
 README.md
+
 ```
 
 > [!WARNING]
-> **Work in Progress**: This library is currently in development.
->
-> While still in development, the Repo may result in execution error(s) and further change(s), as model(s)/functionalities may not be fully tested at the time.
-> 
-> Thank you for your patience...
-
+> **Work in Progress**: This library is currently in active alpha development.
+> Execution errors and breaking API changes may occur as edge-case model combinations/functionalities are thoroughly tested. Thank you for your patience!
 
 ## Contributing
 
-Contributions are welcome! If you'd like to add support for a new Hugging Face architecture or optimize the wrapper layer, please open an issue or submit a Pull Request.
+Contributions are welcome! If you'd like to add support for a new Hugging Face architecture, optimize the wrapper layer, or fix an edge-case bug, please open an issue or submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
+
