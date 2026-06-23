@@ -24,6 +24,8 @@ A unified factory for semantic segmentation models — wrapping both
 (SMP) and [HuggingFace Transformers](https://huggingface.co/docs/transformers/)
 behind a single `create_segmentation_model()` call.
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/imadalishah/SegModels/blob/main/colab.ipynb)
+
 ## Features
 
 - **One entry-point** for 16+ architectures (UNet, FPN, DeepLabV3+, SegFormer, Mask2Former, UPerNet-Swin, DPT, …).
