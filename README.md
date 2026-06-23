@@ -11,14 +11,6 @@
 [![Inference Tests](https://github.com/imadalishah/SegModels/actions/workflows/tests.yml/badge.svg)](https://github.com/imadalishah/SegModels/actions/workflows/tests.yml)
 ![License](https://img.shields.io/badge/License-MIT-blue?logo=mit)
 
-
-
-> [!WARNING]
-> **Work in Progress**: This library is currently in development.
-> The API is subject to breaking changes, and some models may not be fully tested yet. 
-
-
-
 A unified factory for semantic segmentation models — wrapping both
 [segmentation_models_pytorch](https://github.com/qubvel/segmentation_models.pytorch)
 (SMP) and [HuggingFace Transformers](https://huggingface.co/docs/transformers/)
@@ -95,4 +87,11 @@ tests/
 requirements.txt
 README.md
 ```
+
+> [!WARNING]
+> **Work in Progress**: This library is currently in development.
+> While still in development: The Repo may result in execution error(s), further change(s), and model(s) may not be fully tested yet.
+> Thank you for your patience...
+
+
 
