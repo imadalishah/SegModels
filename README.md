@@ -133,7 +133,14 @@ README.md
 
 Contributions are welcome! If you'd like to add support for a new Hugging Face architecture, optimize the wrapper layer, or fix an edge-case bug, please open an issue or submit a Pull Request.
 
-## License
+## License & Citations
 
-This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+### Acknowledgments & Credits
+
+`SegModels` is just a wrapper layer built entirely on top of the incredible work done by the open-source deep learning community. If you use this library in your work, please ensure you credit and cite the core frameworks and the original architecture authors:
+
+- **Segmentation Models PyTorch (SMP)**: Please refer to the original [SMP Repository](https://github.com/qubvel-org/segmentation_models.pytorch).
+- **Hugging Face Transformers:** Developed by the Hugging Face team and community. See their credit/citing documentation.
+- **Model Authors:** Please cite/reference the individual original papers of the architectures you utilize, which can be found in the respective backend documentation.
