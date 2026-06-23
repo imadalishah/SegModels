@@ -90,7 +90,8 @@ README.md
 
 > [!WARNING]
 > **Work in Progress**: This library is currently in development.
-> While still in development: The Repo may result in execution error(s), further change(s), and model(s) may not be fully tested yet.
+> While still in development, the Repo may result in execution error(s) and further change(s), as model(s)/functionalities may not be fully tested at the time.
+> 
 > Thank you for your patience...
 
 
